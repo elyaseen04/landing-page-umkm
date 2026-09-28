@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kopi Lokal Jaya - UMKM Kopi Kekinian</title>
+  
+  <!-- Jalur pemanggilan file CSS eksternal -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -18,7 +20,10 @@
   <section class="hero">
     <h2>Nikmati Cita Rasa Kopi Nusantara Terbaik</h2>
     <p>Dibuat langsung dari biji kopi pilihan petani lokal.</p>
-    <button id="btn-promo" onclick="tampilkanPromo()">Lihat Promo Hari Ini!</button>
+    <button id="btn-promo" onclick="tampilkanPilihanPromo()">Lihat Promo Hari Ini!</button>
+    
+    <!-- Wadah Tempat Pilihan Promo Akan Muncul Interaktif -->
+    <div id="wadah-promo" class="hidden"></div>
   </section>
 
   <!-- Section Produk & Jasa -->
@@ -36,7 +41,7 @@
     </div>
   </section>
 
-  <!-- Section Lokasi & Jam Buka (Tugas Mandiri) -->
+  <!-- Section Lokasi & Jam Buka -->
   <section class="info-lokasi">
     <h2>Lokasi & Jam Operasional</h2>
     <p>📍 <strong>Alamat:</strong> Jl. Merdeka No. 45, Pekalongan</p>
@@ -48,7 +53,7 @@
     <p>&copy; 2026 Kopi Lokal Jaya. Hak Cipta Dilindungi.</p>
   </footer>
 
-  <!-- Pemanggilan File JavaScript -->
+  <!-- Jalur pemanggilan file JavaScript eksternal -->
   <script src="js/script.js"></script>
 </body>
 </html>

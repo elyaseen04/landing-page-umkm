@@ -32,7 +32,7 @@ header {
   color: #4a2c2a;
 }
 
-/* Tombol Promo */
+/* Tombol Utamanya */
 #btn-promo {
   margin-top: 1.5rem;
   padding: 0.8rem 1.5rem;
@@ -47,6 +47,67 @@ header {
 
 #btn-promo:hover {
   background-color: #b55f1a;
+}
+
+/* Kelas untuk menyembunyikan elemen */
+.hidden {
+  display: none !important;
+}
+
+/* Wadah & Desain Pilihan Promo Interaktif */
+#wadah-promo {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.box-pilihan-promo {
+  background: #ffffff;
+  border: 2px solid #d97724;
+  border-radius: 10px;
+  padding: 1.5rem;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.box-pilihan-promo h3 {
+  color: #4a2c2a;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.list-opsi {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.btn-opsi {
+  background-color: #f4f1ea;
+  color: #333;
+  border: 1px solid #d97724;
+  padding: 0.8rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  text-align: left;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+}
+
+.btn-opsi:hover {
+  background-color: #d97724;
+  color: #ffffff;
+}
+
+.pesan-konfirmasi {
+  margin-top: 1rem;
+  padding: 0.8rem;
+  background-color: #e8f5e9;
+  border-left: 4px solid #2e7d32;
+  color: #1b5e20;
+  font-size: 0.9rem;
+  border-radius: 4px;
 }
 
 /* Section Produk */
