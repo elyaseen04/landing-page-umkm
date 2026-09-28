@@ -1,0 +1,103 @@
+/* Reset Dasar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f4f1ea;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background-color: #4a2c2a;
+  color: #ffffff;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+/* Section Hero */
+.hero {
+  text-align: center;
+  padding: 3rem 1rem;
+  background-color: #e2d4c9;
+}
+
+.hero h2 {
+  margin-bottom: 0.5rem;
+  color: #4a2c2a;
+}
+
+/* Tombol Promo */
+#btn-promo {
+  margin-top: 1.5rem;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  background-color: #d97724;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#btn-promo:hover {
+  background-color: #b55f1a;
+}
+
+/* Section Produk */
+.produk {
+  padding: 2rem 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.produk h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #4a2c2a;
+}
+
+.grid-produk {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  min-width: 250px;
+}
+
+/* Section Lokasi & Jam Buka */
+.info-lokasi {
+  background-color: #ffffff;
+  text-align: center;
+  padding: 2rem 1rem;
+  margin-top: 2rem;
+  border-top: 2px dashed #4a2c2a;
+}
+
+.info-lokasi h2 {
+  color: #4a2c2a;
+  margin-bottom: 0.5rem;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #4a2c2a;
+  color: #ffffff;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+}
