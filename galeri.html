@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galeri - Kopi Lokal Jaya</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 20px; background-color: #f9f9f9; color: #333; }
+    header, footer { text-align: center; padding: 15px; background: #3e2723; color: white; border-radius: 8px; }
+    nav a { color: #ffccbc; margin: 0 10px; text-decoration: none; font-weight: bold; }
+    nav a:hover { text-decoration: underline; }
+    main { max-width: 900px; margin: 20px auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    .galeri-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 20px; }
+    figure { border: 1px solid #ddd; padding: 10px; border-radius: 8px; background: #fff; text-align: center; margin: 0; }
+    figure img { width: 100%; height: 160px; object-fit: cover; border-radius: 5px; }
+    figcaption { margin-top: 8px; font-size: 13px; color: #555; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>☕ Kopi Lokal Jaya</h1>
+    <nav>
+      <a href="index.html">Beranda</a>
+      <a href="tentang.html">Tentang Kami</a>
+      <a href="produk.html">Produk & Katalog</a>
+      <a href="galeri.html">Galeri</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Galeri Aktivitas & Proses Produksi</h2>
+    <p>Dokumentasi suasana kedai dan proses penyeduhan kopi nusantara kami.</p>
+
+    <div class="galeri-grid">
+      <figure>
+        <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=300" alt="Proses penyeduhan manual brew oleh barista profesional">
+        <figcaption>Proses seduh manual oleh barista kami.</figcaption>
+      </figure>
+      <figure>
+        <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=300" alt="Suasana kedai kopi yang nyaman dan hangat untuk pelanggan">
+        <figcaption>Suasana area kedai yang nyaman.</figcaption>
+      </figure>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Kopi Lokal Jaya. Hak Cipta Dilindungi.</p>
+  </footer>
+
+</body>
+</html>

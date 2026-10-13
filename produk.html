@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Katalog Produk - Kopi Lokal Jaya</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 20px; background-color: #f9f9f9; color: #333; }
+    header, footer { text-align: center; padding: 15px; background: #3e2723; color: white; border-radius: 8px; }
+    nav a { color: #ffccbc; margin: 0 10px; text-decoration: none; font-weight: bold; }
+    nav a:hover { text-decoration: underline; }
+    main { max-width: 900px; margin: 20px auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    .grid-produk { display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; margin-bottom: 30px; }
+    figure { border: 1px solid #ddd; padding: 15px; border-radius: 8px; width: 250px; background: #fff; text-align: center; }
+    figure img { width: 100%; height: 180px; object-fit: cover; border-radius: 5px; }
+    figcaption { margin-top: 10px; font-size: 14px; color: #555; }
+    table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+    th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+    th { background-color: #5d4037; color: white; }
+    caption { font-weight: bold; margin-bottom: 10px; font-size: 16px; color: #4e342e; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>☕ Kopi Lokal Jaya</h1>
+    <nav>
+      <a href="index.html">Beranda</a>
+      <a href="tentang.html">Tentang Kami</a>
+      <a href="produk.html">Produk & Katalog</a>
+      <a href="galeri.html">Galeri</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Daftar Produk Unggulan & Katalog</h2>
+    <p>Berikut adalah pilihan menu terbaik kami yang diolah dari biji kopi pilihan petani lokal.</p>
+
+    <!-- Bagian Figure Produk -->
+    <div class="grid-produk">
+      <figure>
+        <img src="https://lh3.googleusercontent.com/d/1BNiIPUfjAZiJt5cXglDjr7zuTiwQICyE" alt="Cangkir Es Kopi Susu Aren dengan gula aren murni">
+        <figcaption><strong>Es Kopi Susu Aren</strong> - Perpaduan espresso dan gula aren khas.</figcaption>
+      </figure>
+
+      <!-- Produk Baru Tambahan Tugas Mandiri -->
+      <figure>
+        <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=300" alt="Secangkir Manual Brew V60 dengan seduhan hitam aromatik">
+        <figcaption><strong>Manual Brew V60</strong> - Ekstraksi murni dengan aroma buah segar.</figcaption>
+      </figure>
+    </div>
+
+    <!-- Tabel Katalog Produk (Aksesibel dengan scope dan caption) -->
+    <table>
+      <caption>Tabel Rincian Harga dan Stok Katalog Kopi Lokal Jaya</caption>
+      <thead>
+        <tr>
+          <th scope="col">Nama Produk</th>
+          <th scope="col">Kategori</th>
+          <th scope="col">Harga</th>
+          <th scope="col">Stok/Status</th>
+          <th scope="col">Keterangan</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Es Kopi Susu Aren</td>
+          <td>Kopi Susu</td>
+          <td>Rp 18.000</td>
+          <td>Tersedia</td>
+          <td>Kombinasi espresso mantap dan gula aren murni.</td>
+        </tr>
+        <tr>
+          <td>Manual Brew V60</td>
+          <td>Kopi Hitam</td>
+          <td>Rp 22.000</td>
+          <td>Tersedia</td>
+          <td>Ekstraksi lembut dengan aroma buah dan bunga.</td>
+        </tr>
+        <!-- Baris Produk Baru untuk Tugas Mandiri -->
+        <tr>
+          <td>Cookies Kopi Klasik</td>
+          <td>Camilan Pendamping</td>
+          <td>Rp 12.000</td>
+          <td>Tersedia</td>
+          <td>Kue kering rasa espresso renyah dan gurih.</td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Kopi Lokal Jaya. Hak Cipta Dilindungi.</p>
+  </footer>
+
+</body>
+</html>
