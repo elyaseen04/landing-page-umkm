@@ -12,7 +12,7 @@
     nav a:hover { text-decoration: underline; }
     main { max-width: 900px; margin: 20px auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
     .grid-produk { display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; margin-bottom: 30px; }
-    figure { border: 1px solid #ddd; padding: 15px; border-radius: 8px; width: 250px; background: #fff; text-align: center; }
+    figure { border: 1px solid #ddd; padding: 15px; border-radius: 8px; width: 250px; background: #fff; text-align: center; margin: 0; }
     figure img { width: 100%; height: 180px; object-fit: cover; border-radius: 5px; }
     figcaption { margin-top: 10px; font-size: 14px; color: #555; }
     table { width: 100%; border-collapse: collapse; margin-top: 20px; }
@@ -25,10 +25,10 @@
 
   <header>
     <h1>☕ Kopi Lokal Jaya</h1>
-    <nav>
+    <nav class="nav" aria-label="Navigasi utama">
       <a href="index.html">Beranda</a>
       <a href="tentang.html">Tentang Kami</a>
-      <a href="produk.html">Produk & Katalog</a>
+      <a aria-current="page" href="produk.html">Produk</a>
       <a href="galeri.html">Galeri</a>
     </nav>
   </header>
@@ -41,13 +41,13 @@
     <div class="grid-produk">
       <figure>
         <img src="https://lh3.googleusercontent.com/d/1BNiIPUfjAZiJt5cXglDjr7zuTiwQICyE" alt="Cangkir Es Kopi Susu Aren dengan gula aren murni">
-        <figcaption><strong>Es Kopi Susu Aren</strong> - Perpaduan espresso dan gula aren khas.</figcaption>
+        <figcaption><strong>Es Kopi Susu Aren</strong><br>Perpaduan espresso dan gula aren khas.</figcaption>
       </figure>
 
       <!-- Produk Baru Tambahan Tugas Mandiri -->
       <figure>
         <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=300" alt="Secangkir Manual Brew V60 dengan seduhan hitam aromatik">
-        <figcaption><strong>Manual Brew V60</strong> - Ekstraksi murni dengan aroma buah segar.</figcaption>
+        <figcaption><strong>Manual Brew V60</strong><br>Ekstraksi murni dengan aroma buah segar.</figcaption>
       </figure>
     </div>
 
