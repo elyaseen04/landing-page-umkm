@@ -40,32 +40,29 @@ function pilihPromo(namaPromo) {
 // ==========================================
 // 2. FUNGSI FORM KONTAK & PREVIEW
 // ==========================================
-window.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => {
   const form = document.querySelector("#form-kontak");
-  
-  if (form) {
-    form.addEventListener("submit", function(event) {
-      event.preventDefault();
-      
-      const preview = document.querySelector("#preview-form");
-      if (!preview) return;
+  const preview = document.querySelector("#preview-form");
 
-      // Mengambil nilai dari setiap input berdasarkan atribut name
-      const nama = form.elements["nama"] ? form.elements["nama"].value : "";
-      const email = form.elements["email"] ? form.elements["email"].value : "";
-      const whatsapp = form.elements["whatsapp"] ? form.elements["whatsapp"].value : "";
-      const paket = form.elements["paket"] ? form.elements["paket"].value : "";
+  if (form && preview) {
+    form.addEventListener("submit", (e) => {
+      e.preventDefault(); // Mencegah reload halaman
+
+      // Ambil nilai dari setiap input
+      const nama = form.querySelector("#nama")?.value || "";
+      const email = form.querySelector("#email")?.value || "";
+      const whatsapp = form.querySelector("#whatsapp")?.value || "";
+      const paket = form.querySelector("#paket")?.value || "";
       
-      // Untuk radio button (topik & waktu)
       const topikEl = form.querySelector('input[name="topik"]:checked');
-      const topik = topikEl ? topikEl.value : "Belum dipilih";
+      const topik = topikEl ? topikEl.value : "-";
 
       const waktuEl = form.querySelector('input[name="waktu"]:checked');
-      const waktu = waktuEl ? waktuEl.value : "Belum dipilih";
+      const waktu = waktuEl ? waktuEl.value : "-";
 
-      const pesanIsi = form.elements["pesan"] ? form.elements["pesan"].value : "";
+      const pesan = form.querySelector("#pesan")?.value || "";
 
-      // Menampilkan data ke elemen <pre id="preview-form">
+      // Masukkan ke dalam teks preview
       preview.textContent = 
         `Nama: ${nama}\n` +
         `Email: ${email}\n` +
@@ -73,7 +70,7 @@ window.addEventListener("DOMContentLoaded", () => {
         `Paket: ${paket}\n` +
         `Topik: ${topik}\n` +
         `Waktu Kontak: ${waktu}\n` +
-        `Pesan: ${pesanIsi}`;
+        `Pesan: ${pesan}`;
     });
   }
 });
