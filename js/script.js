@@ -1,19 +1,15 @@
 // ==========================================
-// 1. FUNGSI PROMO (Untuk Halaman Beranda / index.html)
+// 1. FUNGSI PROMO (Untuk Halaman Beranda)
 // ==========================================
 function tampilkanPilihanPromo() {
   const wadah = document.getElementById('wadah-promo');
-
-  // Jika elemen wadah-promo tidak ada di halaman saat ini (misal sedang di halaman kontak), hentikan fungsi agar tidak error
   if (!wadah) return;
 
-  // Jika pilihan promo sudah ada dan sedang tampil, sembunyikan saat tombol diklik lagi (toggle)
   if (wadah.childElementCount > 0 && !wadah.classList.contains('hidden')) {
     wadah.classList.add('hidden');
     return;
   }
 
-  // Masukkan elemen Pilihan Promo ke dalam wadah
   wadah.innerHTML = `
     <div class="box-pilihan-promo">
       <h3>🎁 Pilih Promo Kamu Hari Ini:</h3>
@@ -31,12 +27,9 @@ function tampilkanPilihanPromo() {
       <p id="pesan-konfirmasi" class="pesan-konfirmasi" style="display: none;"></p>
     </div>
   `;
-
-  // Tampilkan wadah promo
   wadah.classList.remove('hidden');
 }
 
-// Fungsi ketika pengguna mengeklik salah satu tombol opsi promo
 function pilihPromo(namaPromo) {
   const pesan = document.getElementById('pesan-konfirmasi');
   if (!pesan) return;
@@ -44,36 +37,43 @@ function pilihPromo(namaPromo) {
   pesan.innerHTML = `✅ Kamu memilih: <strong>${namaPromo}</strong>.<br>Tunjukkan pesan ini ke kasir saat memesan!`;
 }
 
-
 // ==========================================
-// 2. FUNGSI FORM KONTAK & PREVIEW (Untuk Halaman Kontak / kontak.html)
+// 2. FUNGSI FORM KONTAK & PREVIEW
 // ==========================================
-document.addEventListener("DOMContentLoaded", () => {
+window.addEventListener("DOMContentLoaded", () => {
   const form = document.querySelector("#form-kontak");
   
-  // Hanya jalankan kode form ini jika elemen #form-kontak benar-benar ada di halaman tersebut
   if (form) {
-    const preview = document.querySelector("#preview-form");
-
-    form.addEventListener("submit", (event) => {
-      // Mencegah reload halaman
+    form.addEventListener("submit", function(event) {
       event.preventDefault();
       
-      // Mengambil data input menggunakan FormData
-      const data = new FormData(form);
+      const preview = document.querySelector("#preview-form");
+      if (!preview) return;
+
+      // Mengambil nilai dari setiap input berdasarkan atribut name
+      const nama = form.elements["nama"] ? form.elements["nama"].value : "";
+      const email = form.elements["email"] ? form.elements["email"].value : "";
+      const whatsapp = form.elements["whatsapp"] ? form.elements["whatsapp"].value : "";
+      const paket = form.elements["paket"] ? form.elements["paket"].value : "";
       
-      // Menampilkan seluruh data ke area preview
-      if (preview) {
-        preview.textContent = [
-          `Nama: ${data.get("nama")}`,
-          `Email: ${data.get("email")}`,
-          `WhatsApp: ${data.get("whatsapp")}`,
-          `Paket: ${data.get("paket")}`,
-          `Topik: ${data.get("topik")}`,
-          `Waktu Kontak: ${data.get("waktu")}`,
-          `Pesan: ${data.get("pesan")}`,
-        ].join("\n");
-      }
+      // Untuk radio button (topik & waktu)
+      const topikEl = form.querySelector('input[name="topik"]:checked');
+      const topik = topikEl ? topikEl.value : "Belum dipilih";
+
+      const waktuEl = form.querySelector('input[name="waktu"]:checked');
+      const waktu = waktuEl ? waktuEl.value : "Belum dipilih";
+
+      const pesanIsi = form.elements["pesan"] ? form.elements["pesan"].value : "";
+
+      // Menampilkan data ke elemen <pre id="preview-form">
+      preview.textContent = 
+        `Nama: ${nama}\n` +
+        `Email: ${email}\n` +
+        `WhatsApp: ${whatsapp}\n` +
+        `Paket: ${paket}\n` +
+        `Topik: ${topik}\n` +
+        `Waktu Kontak: ${waktu}\n` +
+        `Pesan: ${pesanIsi}`;
     });
   }
 });
