@@ -1,5 +1,5 @@
 // ==========================================
-// 1. FUNGSI PROMO (Untuk Halaman Beranda)
+// 1. FUNGSI PROMO (Untuk Halaman Beranda / index.html)
 // ==========================================
 function tampilkanPilihanPromo() {
   const wadah = document.getElementById('wadah-promo');
@@ -38,7 +38,7 @@ function pilihPromo(namaPromo) {
 }
 
 // ==========================================
-// 2. FUNGSI FORM KONTAK & PREVIEW
+// 2. FUNGSI FORM KONTAK & PREVIEW (Untuk Halaman Kontak / kontak.html)
 // ==========================================
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.querySelector("#form-kontak");
@@ -46,9 +46,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (form && preview) {
     form.addEventListener("submit", (e) => {
-      e.preventDefault(); // Mencegah reload halaman
+      e.preventDefault();
 
-      // Ambil nilai dari setiap input
       const nama = form.querySelector("#nama")?.value || "";
       const email = form.querySelector("#email")?.value || "";
       const whatsapp = form.querySelector("#whatsapp")?.value || "";
@@ -62,7 +61,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const pesan = form.querySelector("#pesan")?.value || "";
 
-      // Masukkan ke dalam teks preview
       preview.textContent = 
         `Nama: ${nama}\n` +
         `Email: ${email}\n` +
