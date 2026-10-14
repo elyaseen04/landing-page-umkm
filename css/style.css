@@ -182,3 +182,56 @@ header nav a {
 header nav a:hover {
     background-color: rgba(255, 255, 255, 0.3); /* Efek saat kursor diarahkan */
 }
+/* Styling Form & Preview P04 */
+.field { 
+  margin-bottom: 16px; 
+}
+.field label { 
+  display: block; 
+  margin-bottom: 6px; 
+  font-weight: bold;
+}
+.field input[type="text"],
+.field input[type="email"],
+.field input[type="tel"],
+.field select,
+.field textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+fieldset { 
+  margin: 0 0 16px; 
+  padding: 12px;
+  border: 1px solid #dccbbc;
+  border-radius: 4px;
+}
+legend {
+  font-weight: bold;
+}
+fieldset label {
+  display: block;
+  margin-top: 6px;
+  font-weight: normal;
+}
+#preview-form { 
+  padding: 16px; 
+  white-space: pre-wrap; 
+  background: white; 
+  border: 1px solid #dccbbc; 
+  border-radius: 4px;
+}
+button[type="submit"] {
+  background-color: #3e2723;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+button[type="submit"]:hover {
+  background-color: #5d4037;
+}

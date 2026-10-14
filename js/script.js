@@ -1,6 +1,11 @@
-// Fungsi untuk memunculkan/menyembunyikan kotak pilihan promo di bawah tombol
+// ==========================================
+// 1. FUNGSI PROMO (Untuk Halaman Beranda / index.html)
+// ==========================================
 function tampilkanPilihanPromo() {
   const wadah = document.getElementById('wadah-promo');
+
+  // Jika elemen wadah-promo tidak ada di halaman saat ini (misal sedang di halaman kontak), hentikan fungsi agar tidak error
+  if (!wadah) return;
 
   // Jika pilihan promo sudah ada dan sedang tampil, sembunyikan saat tombol diklik lagi (toggle)
   if (wadah.childElementCount > 0 && !wadah.classList.contains('hidden')) {
@@ -34,6 +39,41 @@ function tampilkanPilihanPromo() {
 // Fungsi ketika pengguna mengeklik salah satu tombol opsi promo
 function pilihPromo(namaPromo) {
   const pesan = document.getElementById('pesan-konfirmasi');
+  if (!pesan) return;
   pesan.style.display = 'block';
   pesan.innerHTML = `✅ Kamu memilih: <strong>${namaPromo}</strong>.<br>Tunjukkan pesan ini ke kasir saat memesan!`;
 }
+
+
+// ==========================================
+// 2. FUNGSI FORM KONTAK & PREVIEW (Untuk Halaman Kontak / kontak.html)
+// ==========================================
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.querySelector("#form-kontak");
+  
+  // Hanya jalankan kode form ini jika elemen #form-kontak benar-benar ada di halaman tersebut
+  if (form) {
+    const preview = document.querySelector("#preview-form");
+
+    form.addEventListener("submit", (event) => {
+      // Mencegah reload halaman
+      event.preventDefault();
+      
+      // Mengambil data input menggunakan FormData
+      const data = new FormData(form);
+      
+      // Menampilkan seluruh data ke area preview
+      if (preview) {
+        preview.textContent = [
+          `Nama: ${data.get("nama")}`,
+          `Email: ${data.get("email")}`,
+          `WhatsApp: ${data.get("whatsapp")}`,
+          `Paket: ${data.get("paket")}`,
+          `Topik: ${data.get("topik")}`,
+          `Waktu Kontak: ${data.get("waktu")}`,
+          `Pesan: ${data.get("pesan")}`,
+        ].join("\n");
+      }
+    });
+  }
+});
