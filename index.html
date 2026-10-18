@@ -38,14 +38,15 @@
   </header>
 
   <!-- Section Hero / Promo Utama -->
-  <section class="hero">
-    <h2>Nikmati Cita Rasa Kopi Nusantara Terbaik</h2>
-    <p>Dibuat langsung dari biji kopi pilihan petani lokal.</p>
-    <button id="btn-promo" onclick="tampilkanPilihanPromo()">Lihat Promo Hari Ini!</button>
-    
-    <!-- Wadah Tempat Pilihan Promo Akan Muncul Interaktif -->
-    <div id="wadah-promo" class="hidden"></div>
-  </section>
+  <section class="hero" aria-labelledby="hero-title">
+  <div class="hero-content">
+    <p class="eyebrow">UMKM Pekalongan</p>
+    <h1 id="hero-title">Kopi Lokal Jaya</h1>
+    <p>Kopi lokal pilihan untuk teman belajar, bekerja, dan berdiskusi.</p>
+    <button id="promoButton" type="button" class="button">Lihat promo hari ini</button>
+  </div>
+  <img class="hero-image" src="assets/images/etalase-kopi.svg" alt="Etalase Kopi Lokal Jaya berisi kemasan kopi lokal" />
+</section>
 
   <!-- Section Produk & Jasa -->
   <section class="produk">

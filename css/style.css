@@ -1,9 +1,9 @@
 /* ==========================================================================
-   P05: CSS FUNDAMENTAL & DESIGN TOKEN
+   P06: LAYOUT GRID DAN FLEXBOX
    Proyek: Kopi Lokal Jaya
    ========================================================================== */
 
-/* --- 1. DESIGN TOKENS (:root) --- */
+/* --- 1. DESIGN TOKENS --- */
 :root {
   --color-primary: #6f3b1f;
   --color-primary-strong: #4b2715;
@@ -50,62 +50,45 @@ body {
   margin: 0 auto;
 }
 
-p {
-  margin-bottom: var(--space-2);
-  text-align: center;
-}
-
 :focus-visible {
   outline: 3px solid var(--color-focus);
   outline-offset: 2px;
 }
 
-/* --- 3. HEADER & TAGLINE --- */
+/* --- 3. FLEXBOX: NAVIGASI HEADER (.nav) --- */
 header {
   background-color: var(--color-primary);
   color: #ffffff;
   padding: var(--space-4);
   border-radius: var(--radius-md);
-  text-align: center;
   margin-bottom: var(--space-4);
 }
 
-header img {
-  display: block;
-  margin: 0 auto var(--space-2) auto;
-  max-width: 80px;
-  height: auto;
-  border-radius: 50%;
+.nav {
+  display: flex;
+  gap: var(--space-3);
+  align-items: center;
+  justify-content: space-between;
 }
 
-header h1 {
-  font-size: clamp(1.8rem, 4vw, 2.3rem);
-  line-height: 1.2;
-  margin-bottom: var(--space-1);
-  text-align: center;
+.brand {
+  margin-bottom: 0;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
-header p, header .tagline {
-  display: block;
-  text-align: center;
-  margin: 0 auto var(--space-3) auto;
-  color: #f3e9e1;
-  font-style: italic;
-  font-size: 1rem;
-}
-
-nav ul {
+.nav ul {
+  display: flex;
+  gap: var(--space-2);
+  flex-wrap: wrap;
   list-style: none;
-  padding: 0;
-  text-align: center;
 }
 
-nav li {
-  display: inline-block;
-  margin: var(--space-1);
+.nav li {
+  margin: 0;
 }
 
-nav a {
+.nav a {
   color: #ffffff;
   text-decoration: none;
   padding: var(--space-1) var(--space-2);
@@ -114,36 +97,73 @@ nav a {
   font-weight: 600;
 }
 
-nav a:hover {
+.nav a:hover {
   background-color: var(--color-primary-strong);
 }
 
-/* --- 4. SECTIONS & CARDS --- */
-section {
+/* --- 4. GRID: HERO SECTION --- */
+.hero {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: var(--space-4);
+  align-items: center;
   background-color: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   padding: var(--space-4);
   margin-bottom: var(--space-4);
   box-shadow: var(--shadow-card);
-  text-align: center;
 }
 
-h2, h3 {
-  color: var(--color-primary-strong);
-  margin-bottom: var(--space-2);
-  text-align: center;
+.hero-image {
+  width: 100%;
+  border-radius: var(--radius-md);
 }
 
-.card, .product-card {
+/* --- 5. GRID: KATALOG & GALERI --- */
+.product-grid,
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-3);
+}
+
+.gallery-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+/* --- 6. FLEXBOX & POSITIONING: CARD & ACTIONS --- */
+.product-card {
+  display: flex;
+  flex-direction: column;
   background-color: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   padding: var(--space-3);
-  margin-bottom: var(--space-3);
-  text-align: center;
+  position: relative; /* Containing block untuk badge */
+  box-shadow: var(--shadow-card);
 }
 
+.product-badge {
+  align-self: flex-start;
+  padding: 0.25rem var(--space-2);
+  color: var(--color-primary-strong);
+  font-size: 0.875rem;
+  font-weight: 800;
+  background: #fef3c7;
+  border-radius: var(--radius-pill);
+  margin-bottom: var(--space-2);
+}
+
+.card-actions {
+  display: flex;
+  gap: var(--space-2);
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: auto; /* Mendorong tombol ke dasar card */
+}
+
+/* --- 7. KOMPONEN UMUM, TABEL, FORM & FOOTER --- */
 .button, button, input[type="submit"] {
   display: inline-block;
   background-color: var(--color-primary);
@@ -154,11 +174,28 @@ h2, h3 {
   font-weight: 600;
   cursor: pointer;
   text-decoration: none;
-  margin-top: var(--space-2);
 }
 
 .button:hover, button:hover, input[type="submit"]:hover {
   background-color: var(--color-primary-strong);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: var(--space-3);
+  background-color: var(--color-surface);
+}
+
+th, td {
+  border: 1px solid var(--color-border);
+  padding: var(--space-2);
+  text-align: left;
+}
+
+th {
+  background-color: var(--color-surface-soft);
+  color: var(--color-primary-strong);
 }
 
 footer {
