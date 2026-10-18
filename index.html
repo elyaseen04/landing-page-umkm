@@ -4,79 +4,76 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kopi Lokal Jaya - UMKM Kopi Kekinian</title>
-  
-  <!-- Jalur pemanggilan file CSS eksternal -->
   <link rel="stylesheet" href="css/style.css">
-  <style>
-    /* Styling tambahan untuk menyesuaikan ukuran logo dari Google Drive */
-    header img {
-      width: 80px;
-      height: 80px;
-      object-fit: cover;
-      border-radius: 50%;
-    }
-  </style>
 </head>
 <body>
 
-  <!-- Header / Navigasi -->
+  <!-- Header & Navigasi Seragam -->
   <header>
-    <img src="https://lh3.googleusercontent.com/d/1BNiIPUfjAZiJt5cXglDjr7zuTiwQICyE" alt="Logo Kopi Lokal Jaya">
-    <h1>☕ Kopi Lokal Jaya</h1>
-    <p>Rasa Autentik, Harga Bersahabat</p>
-    
-    <!-- Navigasi Lengkap P04 (Beranda, Tentang Kami, Produk, Galeri, Kontak) -->
-    <nav class="nav" aria-label="Navigasi utama">
-      <ul>
-        <li><a aria-current="page" href="index.html">Beranda</a></li>
-        <li><a href="tentang.html">Tentang Kami</a></li>
-        <li><a href="produk.html">Produk</a></li>
-        <li><a href="galeri.html">Galeri</a></li>
-        <li><a href="kontak.html">Kontak</a></li>
-      </ul>
-    </nav>
+    <div class="nav">
+      <div class="brand">☕ Kopi Lokal Jaya</div>
+      <nav aria-label="Navigasi utama">
+        <ul>
+          <li><a aria-current="page" href="index.html">Beranda</a></li>
+          <li><a href="tentang.html">Tentang Kami</a></li>
+          <li><a href="produk.html">Produk</a></li>
+          <li><a href="galeri.html">Galeri</a></li>
+          <li><a href="kontak.html">Kontak</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <!-- Section Hero / Promo Utama -->
-  <section class="hero" aria-labelledby="hero-title">
-  <div class="hero-content">
-    <p class="eyebrow">UMKM Pekalongan</p>
-    <h1 id="hero-title">Kopi Lokal Jaya</h1>
-    <p>Kopi lokal pilihan untuk teman belajar, bekerja, dan berdiskusi.</p>
-    <button id="promoButton" type="button" class="button">Lihat promo hari ini</button>
-  </div>
-  <img class="hero-image" src="assets/images/etalase-kopi.svg" alt="Etalase Kopi Lokal Jaya berisi kemasan kopi lokal" />
-</section>
-
-  <!-- Section Produk & Jasa -->
-  <section class="produk">
-    <h2>Menu Terfavorit</h2>
-    <div class="grid-produk">
-      <div class="card">
-        <h3>Es Kopi Susu Aren</h3>
-        <p>Kombinasi espresso mantap dan gula aren murni khas daerah.</p>
+  <main>
+    <!-- Section Hero / Promo Utama (Grid 2 Track) -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-content">
+        <p class="eyebrow">UMKM Pekalongan</p>
+        <h1 id="hero-title">Kopi Lokal Jaya</h1>
+        <p>Kopi lokal pilihan untuk teman belajar, bekerja, dan berdiskusi.</p>
+        <button id="promoButton" type="button" class="button">Lihat promo hari ini</button>
       </div>
-      <div class="card">
-        <h3>Manual Brew V60</h3>
-        <p>Ekstraksi lembut dengan aroma buah dan bunga yang pekat.</p>
-      </div>
-    </div>
-  </section>
+      <img class="hero-image" src="assets/images/etalase-kopi.svg" alt="Etalase Kopi Lokal Jaya berisi kemasan kopi lokal" />
+    </section>
 
-  <!-- Section Kontak Singkat & Lokasi -->
-  <section id="kontak-singkat" class="info-lokasi">
-    <h2>Kontak dan Jam Operasional</h2>
-    <p>📍 <strong>Alamat:</strong> Jl. Merdeka No. 45, Pekalongan</p>
-    <p>🕒 <strong>Jam Buka:</strong> Senin – Minggu | 08.00 – 22.00 WIB</p>
-    <p>Hubungi kanal resmi kami atau kunjungi halaman <a href="kontak.html">Kontak</a> untuk mengisi form pesan.</p>
-  </section>
+    <!-- Section Produk Terfavorit (Grid 3 Kolom & Flex Card) -->
+    <section aria-labelledby="menu-terfavorit">
+      <h2 id="menu-terfavorit">Menu Terfavorit</h2>
+      <div class="product-grid">
+        <article class="product-card">
+          <span class="product-badge">Terlaris</span>
+          <h3>Es Kopi Susu Aren</h3>
+          <p>Kombinasi espresso mantap dan gula aren murni khas daerah.</p>
+          <div class="card-actions">
+            <a class="button" href="produk.html">Lihat Menu</a>
+          </div>
+        </article>
+        
+        <article class="product-card">
+          <span class="product-badge">Segar</span>
+          <h3>Manual Brew V60</h3>
+          <p>Ekstraksi lembut dengan aroma buah dan bunga yang pekat.</p>
+          <div class="card-actions">
+            <a class="button" href="produk.html">Lihat Menu</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Section Kontak Singkat & Lokasi -->
+    <section id="kontak-singkat" class="info-lokasi">
+      <h2>Kontak dan Jam Operasional</h2>
+      <p>📍 <strong>Alamat:</strong> Jl. Merdeka No. 45, Pekalongan</p>
+      <p>🕒 <strong>Jam Buka:</strong> Senin – Minggu | 08.00 – 22.00 WIB</p>
+      <p>Hubungi kanal resmi kami atau kunjungi halaman <a href="kontak.html">Kontak</a> untuk mengisi form pesan.</p>
+    </section>
+  </main>
 
   <!-- Footer -->
   <footer>
     <p>&copy; 2026 Kopi Lokal Jaya. Hak Cipta Dilindungi.</p>
   </footer>
 
-  <!-- Jalur pemanggilan file JavaScript eksternal -->
   <script src="js/script.js"></script>
 </body>
 </html>
